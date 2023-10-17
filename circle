@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cirkel</title>
+
+  <style>
+    #circle {
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      border: outset 2px aqua;
+      background-color:paleturquoise;
+      display: none;
+      transition: width 0.5s, height 0.5s;
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+    <p1>Geef een nummer en het laat een cirkel zien met uw nummer als diameter <p1> <br> <br>
+  <input type="number" id="inputNumber" min="0">
+  <button onclick="displayCircle()">Submit</button>
+  <div id="circle"></div>
+
+  <script>
+    function displayCircle() {
+      var inputNumber = document.getElementById("inputNumber").value;
+      var circle = document.getElementById("circle");
+
+      if (inputNumber !== "") {
+        circle.style.width = inputNumber + "px";
+        circle.style.height = inputNumber + "px";
+        circle.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
